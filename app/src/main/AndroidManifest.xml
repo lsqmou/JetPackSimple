@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.LifecycleActivity"
-                  android:screenOrientation="behind"/>
+        <activity android:name=".ui.LifecycleActivity"/>
+
+        <activity android:name=".ui.ViewModelActivity"/>
+
+        <activity android:name=".ui.SimaplActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

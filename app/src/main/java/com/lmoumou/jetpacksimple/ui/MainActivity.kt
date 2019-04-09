@@ -1,9 +1,8 @@
 package com.lmoumou.jetpacksimple.ui
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.lmoumou.jetpacksimple.R
 import com.lmoumou.jetpacksimple.adapter.MainAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         MainAdapter(
             this,
             dataList
-        ) { position, view -> onItemClick(position, view) }
+        ) { position, _ -> onItemClick(position) }
     }
 
 
@@ -31,16 +30,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun iniData() {
         dataList.add("Lifecycle")
+        dataList.add("ViewModel")
+        dataList.add("Navigation")
+        dataList.add("Simple")
     }
 
 
-    private fun onItemClick(position: Int, view: View) {
+    private fun onItemClick(position: Int) {
         when (position) {
             0 -> {
                 LifecycleActivity.startThis(this@MainActivity)
             }
             1 -> {
+                ViewModelActivity.startThis(this@MainActivity)
+            }
+            2 -> {
 
+            }
+            3 -> {
+                SimaplActivity.startThis(this@MainActivity)
             }
         }
     }
