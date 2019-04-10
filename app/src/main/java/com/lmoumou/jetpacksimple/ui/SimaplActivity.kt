@@ -28,14 +28,14 @@ class SimaplActivity : AppCompatActivity() {
         }
     }
 
-    private lateinit var navController:NavController
+    private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_simaple)
 
-        navController=Navigation.findNavController(this,R.id.garden_nav_fragment)
+        navController = Navigation.findNavController(this, R.id.garden_nav_fragment)
         appBarConfiguration = AppBarConfiguration(navController.graph, mDrawerLayout)
 
         // Set up ActionBar
@@ -44,6 +44,8 @@ class SimaplActivity : AppCompatActivity() {
 
         // Set up navigation menu
         navigationView.setupWithNavController(navController)
+        //显示指定Fragment
+        navController.navigate(R.id.plant_detail_fragment)
     }
 
     override fun onSupportNavigateUp(): Boolean {

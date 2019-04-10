@@ -23,6 +23,8 @@
 
         <activity android:name=".ui.SimaplActivity"
                   android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.navigation.NavigationActivity"/>
     </application>
 
 </manifest>

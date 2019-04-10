@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lmoumou.jetpacksimple.R
 import com.lmoumou.jetpacksimple.adapter.MainAdapter
+import com.lmoumou.jetpacksimple.ui.navigation.NavigationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 ViewModelActivity.startThis(this@MainActivity)
             }
             2 -> {
-
+                NavigationActivity.startThis(this@MainActivity)
             }
             3 -> {
                 SimaplActivity.startThis(this@MainActivity)

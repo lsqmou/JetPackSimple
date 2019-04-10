@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:toos="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:startDestination="@+id/nav_simple_first_frag"
+            android:id="@+id/nav_simple.xml">
+
+    <fragment
+            android:id="@+id/nav_simple_first_frag"
+            android:label="First Fragment"
+            toos:layot="@layout/fragment_simple_first"
+            android:name="com.lmoumou.jetpacksimple.ui.navigation.FirstFragment">
+
+        <action android:id="@+id/nav_simple_first_frag_to_nav_simple_two_frag"
+                app:destination="@+id/nav_simple_two_frag"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/nav_simple_two_frag"
+              android:label="Two Fragment"
+              android:name="com.lmoumou.jetpacksimple.ui.navigation.TwoFragment"
+              toos:layout="@layout/fragment_two"/>
+
+</navigation>
